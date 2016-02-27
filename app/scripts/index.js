@@ -1,4 +1,5 @@
 var React = require('react');//React.jsのライブラリをimport
+var ReactDOM = require('react-dom');
 
 //コンポーネントを定義
 var Index = React.createClass({
@@ -10,7 +11,7 @@ var Index = React.createClass({
     });
 
 //id='content'の要素にコンポーネント「Index」を挿入してレンダリング
-React.render(
+ReactDOM.render(
 	     <Index />,
 	     document.getElementById('content')
 	     );
