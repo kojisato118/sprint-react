@@ -3,34 +3,8 @@ var ReactDOM = require('react-dom');
 var Header = require('./views/header.jsx');
 //var Body = require('./views/body.jsx');
 var Masonry = require('react-masonry-component')
+var Gallery = require('./views/gallery.jsx')
 var Footer = require('./views/footer.jsx');
-
-var masonryOptions = {
-  transitionDuration: 0
-};
-
-var Gallery = React.createClass({
-    render: function () {
-        var childElements = this.props.elements.map(function(element){
-           return (
-                <li className="image-element-class">
-                    <img src={element.src} />
-                </li>
-            );
-        });
-
-        return (
-            <Masonry
-                className={'my-gallery-class'} // default ''
-                elementType={'ul'} // default 'div'
-                options={masonryOptions} // default {}
-                disableImagesLoaded={false} // default false
-            >
-                {childElements}
-            </Masonry>
-        );
-    }
-});
 
 //コンポーネントを一つにまとめる
 var Index = React.createClass({
