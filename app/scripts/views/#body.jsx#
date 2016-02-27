@@ -1,8 +1,6 @@
-var React = require('react');//React.jsã®ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã‚’import
-var ReactDOM = require('react-dom');
+var React = require('react');//React.js’¤Î’¥é’¥¤’¥Ö’¥é’¥ê’¤òimport
 
-//ãƒœãƒ‡ã‚£ã®å®šç¾©
-var Body = React.createClass({
+//’¥Ü’¥Çuuuuuuuuuuu Body = React.createClass({
   render: function(){
 	  return (
       <UserBox/>
@@ -44,8 +42,8 @@ var UserList = React.createClass({
 	    <table>
 		    <tbody>
 			    <tr>
-				    <th>åå‰</th>
-					  <th>ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹</th>
+				    <th>’Ì¾’Á°</th>
+					  <th>’¥á’¡¼’¥ë’¥¢’¥É’¥ì’¥¹</th>
   				</tr>
 	  		  {UserNodes}
 		  	</tbody>
@@ -90,7 +88,7 @@ var UserForm = React.createClass({
           <tbody>
             <tr>
               <td>
-                <label>åå‰</label>
+                <label>’Ì¾’Á°</label>
               </td>
               <td>
                 <input type="text" ref="name"/>
@@ -98,7 +96,7 @@ var UserForm = React.createClass({
             </tr>
             <tr>
               <td>
-                <label>ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹</label>
+                <label>’¥á’¡¼’¥ë’¥¢’¥É’¥ì’¥¹</label>
               </td>
               <td>
                 <input type="text" ref="mail"/>
@@ -107,11 +105,12 @@ var UserForm = React.createClass({
           </tbody>
         </table>
         <div style={{textAlign:"right"}}>
-          <button onClick={this.handleSubmit}>è¿½åŠ </button>
+          <button onClick={this.handleSubmit}>’ÄÉ’²Ã</button>
         </div>
       </div>
     );
   }
 });
 
-module.exports = Body;
+ 
+Module.exports = Body;
