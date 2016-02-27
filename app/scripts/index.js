@@ -1,17 +1,25 @@
 var React = require('react');//React.jsのライブラリをimport
 var ReactDOM = require('react-dom');
+var Header = require('./views/header.jsx');
+var Body = require('./views/body.jsx');
+var Footer = require('./views/footer.jsx');
 
-//コンポーネントを定義
+//コンポーネントを一つにまとめる
 var Index = React.createClass({
 	render:function(){
-	    return (
-        <p>hoge</p>
-		    );
+	  return (
+      <div>
+			  <Header/>
+				<hr/>
+				<Body/>
+				<hr/>
+				<Footer/>
+			</div>   
+		);
 	}
-    });
+});
 
-//id='content'の要素にコンポーネント「Index」を挿入してレンダリング
 ReactDOM.render(
-	     <Index />,
-	     document.getElementById('content')
-	     );
+  <Index />,
+  document.getElementById('content')
+);
