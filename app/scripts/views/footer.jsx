@@ -4,7 +4,10 @@ var React = require('react');//React.jsのライブラリをimport
 var Footer = React.createClass({
   render: function(){
 	  return (
-	    <h1>Footer</h1>
+      <footer style={{textAlign: "center"}}>
+			  <hr/>
+	      <h1>Footer</h1>
+      </footer>
 		);
 	}
 });

@@ -4,7 +4,9 @@ var React = require('react');//React.jsのライブラリをimport
 var Body = React.createClass({
   render: function(){
 	  return (
-	    <h1>Body</h1>
+      <div style={{textAlign: "center"}}>
+	      <h1>Bodyです</h1>
+      </div>
 		);
 	}
 });

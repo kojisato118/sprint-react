@@ -10,8 +10,9 @@ var Index = React.createClass({
 	  return (
       <div>
 			  <Header/>
-				<hr/>
-				<Body/>
+				<div className="main">
+				  <Body/>
+				</div>
 				<hr/>
 				<Footer/>
 			</div>   
