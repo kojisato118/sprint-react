@@ -16,28 +16,38 @@ var masonryOptions = {
   }
 };
 
+function reload(bindTargget){
+  $.ajax({
+    url: url + "/api/contents/",
+    type: "GET",
+    xhrFields: {
+      withCredentials: true
+    },
+    data: {page : page},
+    dataType: "json",
+    success: function(data) {
+      d = this.state.data
+      this.setState({data:d.concat(data)});
+    }.bind(bindTargget),
+      error: function(xht, status, err) {
+      alert("errror: ");
+      console.error(url + "/api/contents/", status, err.toString());
+      // TODO: エラー時の処理
+    }.bind(bindTargget)
+  });
+}
+
 var Gallery = React.createClass({
     getInitialState: function(){
       return {data: []};
     },
     componentDidMount: function() {
-      $.ajax({
-        url: url + "/api/contents/",
-        type: "GET",
-        xhrFields: {
-          withCredentials: true
-        },
-        data: {page : page},
-        dataType: "json",
-        success: function(data) {
-          this.setState({data: data});
-        }.bind(this),
-        error: function(xht, status, err) {
-          alert("errror: ");
-          console.error(url + "/api/contents/", status, err.toString());
-          // TODO: エラー時の処理
-        }.bind(this)
-      });
+      reload(this);    
+    },
+    onMoreButtonClick(e) {
+    // e is SyntheticEvent
+      page += 1;
+      reload(this);
     },
     render: function () {
         var childElements = this.state.data.map(function(element){
@@ -76,15 +86,20 @@ var Gallery = React.createClass({
         });
 
         return (
+          <div>
             <Masonry
-                className={'masonry'}
-                id={"grid"}
-                elementType={'div'} // default 'div'
-                options={masonryOptions} // default {}
-                disableImagesLoaded={false} // default false
+              className={'masonry'}
+              id={"grid"}
+              elementType={'div'} // default 'div'
+              options={masonryOptions} // default {}
+              disableImagesLoaded={false} // default false
             >
-                {childElements}
+              {childElements}
             </Masonry>
+            <div id="more">
+              <button onClick={this.onMoreButtonClick}>もっと見る</button>
+            </div>
+          </div>
         );
     }
 });

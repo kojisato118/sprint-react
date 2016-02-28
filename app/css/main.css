@@ -15,3 +15,16 @@ html,body{
 	position: absolute;
 	bottom: 0;
 }
+
+div#more{
+  width: 100%;
+  text-align : center;
+}
+  div#more > button{
+    background: #c8c8c8;
+    width: 160px;
+    margin-right: auto;
+    margin-left : auto;
+    border-radius: 5px;
+    font-size: 20px;
+  }
