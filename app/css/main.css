@@ -1,4 +1,6 @@
 html,body{
+  background: #f5f5f5;
+  color: #323232;
   height: 100%;
 }
 #content{
@@ -6,10 +8,35 @@ html,body{
 	position: relative;
 	min-height: 100%;
 }
+
 .main{
   padding-bottom:40px;
 }
-.footer{
+
+header{
+  position: relative;
+  width: 100%;
+}
+  header > div.container{
+    text-align: center;
+    width: 100%;
+  }
+    header > div.container > span.title{
+      font-size: 20px;
+      font-weight: bold;
+    }
+    header > div.container > div.link {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+      a{
+        padding: 4px;
+        font-size: 12px;
+      }
+
+
+footer{
   height: 40px;
   width: 100%;
 	position: absolute;

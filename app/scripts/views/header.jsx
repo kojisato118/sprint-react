@@ -5,8 +5,9 @@ var Header = React.createClass({
   render: function(){
 	  return (
 	    <header>
-			 <h1>Headerです</h1>
-			 <hr/>
+			 <div className="container">
+         <span className="title"> ポートフォリオ</span>
+       </div>
 			</header>
 		);
 	}

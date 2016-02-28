@@ -15,8 +15,6 @@ var Index = React.createClass({
 				<div className="main">
 				  <Gallery />
 				</div>
-				<hr/>
-				<Footer/>
 			</div>   
 		);
 	}
